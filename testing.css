@@ -12,8 +12,9 @@
   opacity: 1;
 }
 
-body, #more-about-me {
-  display:grid;
+body,
+#more-about-me {
+  display: grid;
 }
 
 #more-about-me {
@@ -27,5 +28,5 @@ body, #more-about-me {
 }
 
 #more-about-me div:nth-child(odd) {
-  background-color:#1111;
+  background-color: #1111;
 }
