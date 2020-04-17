@@ -1,1 +1,59 @@
 /* Insert your styles here */
+
+/*Wrapper*/
+#wrapper {
+  width: 100%;
+}
+
+/*End wrapper*/
+/*Header*/
+
+header {
+  background: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -moz-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -ms-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -o-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+}
+
+.mainHeader {
+  width: 100%;
+}
+
+.logo {
+  margin: 26px 0 26px 20px;
+}
+
+.logo h1 {
+  display: inline-block;
+  font-size: 23px;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+nav#mainNav {
+  float: right;
+  margin-top: 2px;
+}
+
+nav#mainNav li {
+  display: inline-block;
+  position: relative;
+}
+
+nav#mainNav li a {
+  color: #111111;
+  display: block;
+  padding: 25px 15px;
+  position: relative;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+/*End header*/
