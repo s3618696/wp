@@ -4,6 +4,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 /* header */
 header {
@@ -57,21 +58,22 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 3000;
 }
 
 .nav-backgroud {
   width: 100%;
-  height: 60px;
+  height: 53px;
   background-color: #111111;
-  opacity: 0.2;
   position: absolute;
+  opacity: 0.9;
 }
 
 nav#mainNav {
-  padding: 0 100px 0 100px;
+  padding: 0px 100px 0 100px;
   float: left;
   position: relative;
-  z-index: 1;
+  z-index: 2000;
 }
 
 nav#mainNav li {
@@ -80,7 +82,7 @@ nav#mainNav li {
 }
 
 nav#mainNav li a {
-  color: #111111;
+  color: #ffffff;
   display: inline-block;
   padding: 0px 15px;
   position: relative;
@@ -99,12 +101,32 @@ nav#mainNav li a {
 
 /* about-first-content */
 .first-content {
-  height: 370px;
-  padding: 80px 150px 100px 150px;
+  width: 100%;
+  height: 100vh;
   border-bottom: 3px solid rgb(240, 240, 240);
+  position: relative;
 }
 
-.first-content h1 {
+.parallax-1 {
+  background-image: url(./images/parallax/parallax_1.jpeg);
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-center {
+  background-color: #ffffff;
+  width: 100%;
+  height: 38%;
+  position: absolute;
+  top: 30%;
+  padding: 0 150px 0 150px;
+}
+
+.content-center h1 {
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
@@ -112,7 +134,7 @@ nav#mainNav li a {
   padding-top: 40px;
 }
 
-.first-content p {
+.content-center p {
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
@@ -120,7 +142,7 @@ nav#mainNav li a {
   color: rgb(60, 60, 60);
 }
 
-.first-content p span {
+.content-center p span {
   font-weight: 900;
 }
 /* end about first content */
@@ -174,7 +196,7 @@ nav#mainNav li a {
 .left-column {
   float: left;
   width: 30%;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .middle-column {
@@ -222,3 +244,60 @@ nav#mainNav li a {
 }
 /* end about Atmos & 3D */
 /* end about */
+
+/* prices */
+.price {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 3px solid rgb(240, 240, 240);
+  position: relative;
+}
+
+.parallax-2 {
+  background-image: url(./images/parallax/parallax_2.jpeg);
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.price-container {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+}
+
+.price-title h1 {
+  width: 70%;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 0px 0 50px 0;
+  margin: 0 210px 10px 210px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.price-row {
+  width: 70%;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  float: left;
+  margin: 0 210px 0 210px;
+}
+
+.row-title {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px 0 10px 0;
+}
+/* end price */
