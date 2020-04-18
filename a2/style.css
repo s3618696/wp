@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
 }
-
+/* header */
 header {
   background-image: url(./images/header_bg.jpeg);
   width: 100%;
@@ -49,7 +49,9 @@ header {
   font-weight: bolder;
   font-size: 30px;
 }
+/* end header */
 
+/* navbar */
 .sticky {
   width: 100%;
   position: -webkit-sticky;
@@ -88,11 +90,14 @@ nav#mainNav li a {
   vertical-align: middle;
   text-decoration: none;
 }
+/* end navbar */
 
+/* about */
 .about-cinemax {
   background-color: #ffffff;
 }
 
+/* about-first-content */
 .first-content {
   height: 370px;
   padding: 80px 150px 100px 150px;
@@ -118,9 +123,13 @@ nav#mainNav li a {
 .first-content p span {
   font-weight: 900;
 }
+/* end about first content */
 
+/* about facilities */
 .facilities {
+  height: 900px;
   padding: 40px 150px 100px 150px;
+  border-bottom: 3px solid rgb(240, 240, 240);
 }
 
 .title h1 {
@@ -147,3 +156,69 @@ nav#mainNav li a {
   height: 100%;
   object-fit: cover;
 }
+/* end about facilities */
+
+/* about Atmos & 3D */
+.projection {
+  height: 1000px;
+  padding: 40px 150px 100px 150px;
+  border-bottom: 3px solid rgb(240, 240, 240);
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-column {
+  float: left;
+  width: 30%;
+  margin-left: 40px;
+}
+
+.middle-column {
+  float: left;
+  width: 30%;
+}
+
+.right-column {
+  float: left;
+  width: 30%;
+}
+
+.card {
+  position: relative;
+  z-index: 1000;
+  margin: 20px 10px 20px 10px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 0 20px 0 20px;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 30%;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  color: rgb(230, 64, 119);
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.card-content p {
+  font-size: 13px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+/* end about Atmos & 3D */
+/* end about */
