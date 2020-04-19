@@ -352,6 +352,10 @@ nav#mainNav li a {
   margin-left: 10px;
 }
 
+.box:hover {
+  border: 2px solid black;
+}
+
 .imgBx {
   width: 200px;
   margin: 5px;
@@ -425,7 +429,7 @@ nav#mainNav li a {
 }
 
 .button {
-  background-color: #f5a3b7; /* Green */
+  background-color: #f5a3b7;
   border: none;
   color: white;
   padding: 8px 16px;
