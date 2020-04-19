@@ -272,9 +272,147 @@
             </div>
           </div>
         </section>
-        <div style="width: 100%; height: 1000px;"></div>
+        <section id="now-showing" class="now-showing-movie">
+          <div id="blur-backgroud" class="backgroud-blur"></div>
+          <div class="now-showing-content">
+            <div class="now-showing-title">
+              <h1>Now Showing</h1>
+            </div>
+            <div class="movie-posters">
+              <div class="box" onclick="openBooking()">
+                <div class="imgBx">
+                  <img src="./images/movies/avenger.jpg" alt="avenger" />
+                </div>
+                <div class="detail">
+                  <div class="middle-content">
+                    <span style="font-size: 20px; color: black;"
+                      >Avengers: Endgame [PG]</span
+                    >
+                    <br /><br />Wed-Fri : 9pm <br />Sat-Sun : 6pm
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="imgBx">
+                  <img
+                    src="./images/movies/topandwedding.png"
+                    alt="topwedding"
+                  />
+                </div>
+                <div class="detail">
+                  <div class="middle-content">
+                    <span style="font-size: 20px; color: black;"
+                      >Top End Wedding [MA]</span
+                    >
+                    <br /><br />Mon-Tue : 6pm <br />Sat-Sun : 3pm
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="imgBx">
+                  <img src="./images/movies/dumbo.jpg" alt="dumbo" />
+                </div>
+                <div class="detail">
+                  <div class="middle-content">
+                    <span style="font-size: 20px; color: black;"
+                      >Dumbo [R]</span
+                    >
+                    <br /><br />Mon-Tue : 12pm <br />Wed-Fri : 6pm <br />Sat-Sun
+                    : 12pm
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="imgBx">
+                  <img
+                    src="./images/movies/thehappyprince.jpg"
+                    alt="happyprince"
+                  />
+                </div>
+                <div class="detail">
+                  <div class="middle-content">
+                    <span style="font-size: 20px; color: black;"
+                      >The Happy Prince [PG]</span
+                    >
+                    <br /><br />Wed-Fri : 12pm <br />Sat-Sun : 9pm
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="imgBx">
+                  <img src="./images/movies/paraside.jpg" alt="paraside" />
+                </div>
+                <div class="detail">
+                  <div class="middle-content">
+                    <span style="font-size: 20px; color: black;"
+                      >Paraside [PG]</span
+                    >
+                    <br /><br />Wed-Fri : 6pm <br />Sat-Sun : 12pm
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="imgBx">
+                  <img
+                    src="./images/movies/crashlandingonyou.png"
+                    alt="crashonyou"
+                  />
+                </div>
+                <div class="detail">
+                  <div class="middle-content">
+                    <span style="font-size: 20px; color: black;"
+                      >Crash Landing On You [PG]</span
+                    >
+                    <br /><br />Mon-Tue : 10pm <br />Sat-Sun : 9pm
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="movie-detail" class="movie-info">
+              <div class="info">
+                <section class="left-section">
+                  <h6 style="color: rgb(230, 64, 119); font-size: 20px;">
+                    Avengers: Endgame [PG]
+                  </h6>
+                  <h8 style="color: #2a5d68; font-size: 18px;"
+                    >Plot Description</h8
+                  >
+                  <p>
+                    The film's development began when Marvel Studios received a
+                    loan from Merrill Lynch in April 2005. After the success of
+                    the film Iron Man in May 2008, Marvel announced that The
+                    Avengers would be released in July 2011 and would bring
+                    together Tony Stark (Downey), Steve Rogers (Evans), Bruce
+                    Banner (Ruffalo), and Thor (Hemsworth) from Marvel's
+                    previous films.
+                  </p>
+                </section>
+                <section class="right-section">
+                  <iframe
+                    width="300"
+                    height="230"
+                    src="https://www.youtube.com/watch?v=6ZfuNTqbHE8"
+                  >
+                  </iframe>
+                </section>
+              </div>
+              <div class="booking">
+                <h8>Make a booking</h8>
+                <button class="button">Wed-Fri : 9pm</button>
+                <button class="button">Sat-Sun : 6pm</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
+
+    <script>
+      function openBooking() {
+        document.getElementById("blur-backgroud").style.display = "block";
+        document.getElementById("movie-detail").style.display = "block";
+      }
+    </script>
 
     <footer></footer>
   </body>

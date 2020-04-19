@@ -1,5 +1,9 @@
 /* Insert your styles here */
 
+html {
+  scroll-behavior: smooth;
+}
+
 #wrapper {
   width: 100%;
   margin: 0;
@@ -58,7 +62,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 3000;
+  z-index: 6000;
 }
 
 .nav-backgroud {
@@ -249,7 +253,6 @@ nav#mainNav li a {
 .price {
   width: 100%;
   height: 100vh;
-  border-bottom: 3px solid rgb(240, 240, 240);
   position: relative;
 }
 
@@ -301,3 +304,145 @@ nav#mainNav li a {
   padding: 10px 0 10px 0;
 }
 /* end price */
+
+/* now showing */
+.now-showing-movie {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.backgroud-blur {
+  width: 100%;
+  height: 120vh;
+  background-color: #ffffff;
+  opacity: 0.7;
+  z-index: 3000;
+  position: relative;
+  display: none;
+}
+.now-showing-content {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+.now-showing-title h1 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 100px 0 100px 0;
+  text-align: center;
+}
+
+.movie-posters {
+  width: 100%;
+  height: 40%;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 100px 0 100px;
+}
+
+.box {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin-left: 10px;
+}
+
+.imgBx {
+  width: 200px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.detail {
+  width: 200px;
+  height: 100%;
+  display: table;
+  margin: 5px;
+}
+
+.middle-content {
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  color: rgb(161, 157, 157);
+}
+
+.imgBx img {
+  height: 100%;
+  object-fit: contain;
+  align-self: flex-end;
+}
+
+/* popup container */
+.movie-info {
+  width: 50%;
+  height: 60%;
+  margin: 100px 0 100px 0;
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  background-color: #111111;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 5000;
+  border-radius: 5px;
+}
+
+.info {
+  width: 100%;
+  height: 60%;
+  display: flex;
+}
+
+.left-section {
+  width: 370px;
+  height: 300px;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  margin: 20px 10px 20px 20px;
+}
+
+.right-section {
+  width: 300px;
+  height: 500px;
+  margin: 30px 20px 20px 0px;
+}
+
+.booking {
+  color: #2a5d68;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 50px 20px 0 20px;
+}
+
+.button {
+  background-color: #f5a3b7; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px 0 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #715f65;
+}
+
+.button:focus {
+  outline: none;
+}
