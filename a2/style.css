@@ -12,9 +12,9 @@ html {
 }
 /* header */
 header {
-  background-image: url(./images/header_bg.jpeg);
+  /* background-image: url(./images/header_bg.jpeg); */
   width: 100%;
-  height: 300px;
+  height: 200px;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -24,12 +24,13 @@ header {
   -ms-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
   -o-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
   position: relative;
+  background-color: black;
 }
 
 .header-backgroud {
   width: 100%;
   height: 100%;
-  background-color: blanchedalmond;
+  background-color: black;
   opacity: 0.75;
 }
 
@@ -42,15 +43,14 @@ header {
 
 .center-content img {
   width: 50%;
-  display: block;
+  object-fit: cover;
   margin: auto;
 }
 
 .center-content div {
   width: 100%;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: bolder;
   font-size: 30px;
 }
@@ -91,7 +91,7 @@ nav#mainNav li a {
   padding: 0px 15px;
   position: relative;
   font-size: 18px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   vertical-align: middle;
   text-decoration: none;
@@ -107,7 +107,6 @@ nav#mainNav li a {
 .first-content {
   width: 100%;
   height: 100vh;
-  border-bottom: 3px solid rgb(240, 240, 240);
   position: relative;
 }
 
@@ -122,20 +121,22 @@ nav#mainNav li a {
 }
 
 .content-center {
-  background-color: #ffffff;
+  background-color: #111111;
   width: 100%;
   height: 38%;
   position: absolute;
   top: 30%;
   padding: 0 150px 0 150px;
+  opacity: 0.95;
 }
 
 .content-center h1 {
   text-align: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 20px;
   font-weight: bold;
   padding-top: 40px;
+  color: #ffffff;
 }
 
 .content-center p {
@@ -143,7 +144,7 @@ nav#mainNav li a {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
   font-weight: 100;
-  color: rgb(60, 60, 60);
+  color: rgb(255, 255, 255);
 }
 
 .content-center p span {
@@ -155,13 +156,14 @@ nav#mainNav li a {
 .facilities {
   height: 900px;
   padding: 40px 150px 100px 150px;
-  border-bottom: 3px solid rgb(240, 240, 240);
+  background-image: url(./images/facility/facility_bg.jpg);
 }
 
 .title h1 {
   font-size: 18px;
   font-weight: 700;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #ffffff;
 }
 
 .column {
@@ -173,8 +175,9 @@ nav#mainNav li a {
 
 .column h3 {
   font-size: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   text-align: center;
+  color: #ffffff;
 }
 
 .column img {
@@ -188,7 +191,7 @@ nav#mainNav li a {
 .projection {
   height: 1000px;
   padding: 40px 150px 100px 150px;
-  border-bottom: 3px solid rgb(240, 240, 240);
+  background-image: url(./images/Atmos_3D/projection_bg.jpg);
 }
 
 .row::after {
@@ -308,13 +311,14 @@ nav#mainNav li a {
 /* now showing */
 .now-showing-movie {
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   position: relative;
+  background-image: url(./images/movies/booking_bg_9.jpg);
 }
 .backgroud-blur {
   width: 100%;
   height: 120vh;
-  background-color: #ffffff;
+  background-color: #000000;
   opacity: 0.7;
   z-index: 3000;
   position: relative;
@@ -332,6 +336,7 @@ nav#mainNav li a {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 100px 0 100px 0;
   text-align: center;
+  color: #ffffff;
 }
 
 .movie-posters {
@@ -350,10 +355,12 @@ nav#mainNav li a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 500px;
   margin-left: 10px;
+  background-color: #111111;
+  margin-top: 10px;
 }
 
 .box:hover {
-  border: 2px solid black;
+  border: 2px solid #ffffff;
 }
 
 .imgBx {
@@ -392,7 +399,7 @@ nav#mainNav li a {
   position: absolute;
   top: 20%;
   left: 28%;
-  background-color: #111111;
+  background-color: #ffffff;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 5000;
@@ -410,7 +417,7 @@ nav#mainNav li a {
   height: 300px;
   font-weight: 900;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #ffffff;
+  color: #181616;
   margin: 20px 10px 20px 20px;
 }
 
@@ -421,7 +428,7 @@ nav#mainNav li a {
 }
 
 .booking {
-  color: #2a5d68;
+  color: #8b9394;
   font-size: 18px;
   font-weight: 900;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -431,7 +438,7 @@ nav#mainNav li a {
 .button {
   background-color: #f5a3b7;
   border: none;
-  color: white;
+  color: black;
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
@@ -444,9 +451,42 @@ nav#mainNav li a {
 }
 
 .button:hover {
-  background-color: #715f65;
+  background-color: #111111;
+  color: #ffffff;
 }
 
 .button:focus {
   outline: none;
+}
+/* end popup container */
+/* end now showing */
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  display: flex;
+}
+
+.left-footer {
+  width: 40%;
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  text-align: left;
+  font-size: 18px;
+  margin: 30px 20px 0 100px;
+}
+
+.right-footer {
+  width: 40%;
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  text-align: right;
+  font-size: 20px;
+  margin: 30px 50px 0 0;
 }
