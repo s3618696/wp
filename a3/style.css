@@ -1,0 +1,492 @@
+/* Insert your styles here */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+/* header */
+header {
+  /* background-image: url(./images/header_bg.jpeg); */
+  width: 100%;
+  height: 200px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -moz-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -ms-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  -o-box-shadow: 0 0 3px rgba(153, 153, 153, 0.5);
+  position: relative;
+  background-color: black;
+}
+
+.header-backgroud {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.center-content {
+  width: 25%;
+  position: absolute;
+  top: 30%;
+  left: 42%;
+}
+
+.center-content img {
+  width: 50%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.center-content div {
+  width: 100%;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+/* end header */
+
+/* navbar */
+.sticky {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 6000;
+}
+
+.nav-backgroud {
+  width: 100%;
+  height: 53px;
+  background-color: #111111;
+  position: absolute;
+  opacity: 0.9;
+}
+
+nav#mainNav {
+  padding: 0px 100px 0 100px;
+  float: left;
+  position: relative;
+  z-index: 2000;
+}
+
+nav#mainNav li {
+  display: inline-block;
+  position: relative;
+}
+
+nav#mainNav li a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 0px 15px;
+  position: relative;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  vertical-align: middle;
+  text-decoration: none;
+}
+/* end navbar */
+
+/* about */
+.about-cinemax {
+  background-color: #ffffff;
+}
+
+/* about-first-content */
+.first-content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.parallax-1 {
+  background-image: url(./images/parallax/parallax_1.jpeg);
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-center {
+  background-color: #111111;
+  width: 100%;
+  height: 38%;
+  position: absolute;
+  top: 30%;
+  padding: 0 150px 0 150px;
+  opacity: 0.95;
+}
+
+.content-center h1 {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 40px;
+  color: #ffffff;
+}
+
+.content-center p {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+}
+
+.content-center p span {
+  font-weight: 900;
+}
+/* end about first content */
+
+/* about facilities */
+.facilities {
+  height: 900px;
+  padding: 40px 150px 100px 150px;
+  background-image: url(./images/facility/facility_bg.jpg);
+}
+
+.title h1 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #ffffff;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  margin: 40px 10px 20px 20px;
+  height: 300px;
+}
+
+.column h3 {
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+
+.column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* end about facilities */
+
+/* about Atmos & 3D */
+.projection {
+  height: 1000px;
+  padding: 40px 150px 100px 150px;
+  background-image: url(./images/Atmos_3D/projection_bg.jpg);
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-column {
+  float: left;
+  width: 30%;
+  margin-left: 50px;
+}
+
+.middle-column {
+  float: left;
+  width: 30%;
+}
+
+.right-column {
+  float: left;
+  width: 30%;
+}
+
+.card {
+  position: relative;
+  z-index: 1000;
+  margin: 20px 10px 20px 10px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 0 20px 0 20px;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 30%;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  color: rgb(230, 64, 119);
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.card-content p {
+  font-size: 13px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+/* end about Atmos & 3D */
+/* end about */
+
+/* prices */
+.price {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.parallax-2 {
+  background-image: url(./images/parallax/parallax_2.jpeg);
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.price-container {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+}
+
+.price-title h1 {
+  width: 70%;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 0px 0 50px 0;
+  margin: 0 210px 10px 210px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+.price-row {
+  width: 70%;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  float: left;
+  margin: 0 210px 0 210px;
+}
+
+.row-title {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px 0 10px 0;
+}
+/* end price */
+
+/* now showing */
+.now-showing-movie {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  background-image: url(./images/movies/booking_bg_9.jpg);
+}
+.backgroud-blur {
+  width: 100%;
+  height: 120vh;
+  background-color: #000000;
+  opacity: 0.7;
+  z-index: 3000;
+  position: relative;
+  display: none;
+}
+.now-showing-content {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+.now-showing-title h1 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 100px 0 100px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.movie-posters {
+  width: 100%;
+  height: 40%;
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 100px 0 100px;
+}
+
+.box {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin-left: 10px;
+  background-color: #111111;
+  margin-top: 10px;
+}
+
+.box:hover {
+  border: 2px solid #ffffff;
+}
+
+.imgBx {
+  width: 200px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.detail {
+  width: 200px;
+  height: 100%;
+  display: table;
+  margin: 5px;
+}
+
+.middle-content {
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  color: rgb(161, 157, 157);
+}
+
+.imgBx img {
+  height: 100%;
+  object-fit: contain;
+  align-self: flex-end;
+}
+
+/* popup container */
+.movie-info {
+  width: 50%;
+  height: 60%;
+  margin: 100px 0 100px 0;
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 5000;
+  border-radius: 5px;
+}
+
+.info {
+  width: 100%;
+  height: 60%;
+  display: flex;
+}
+
+.left-section {
+  width: 370px;
+  height: 300px;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #181616;
+  margin: 20px 10px 20px 20px;
+}
+
+.right-section {
+  width: 300px;
+  height: 500px;
+  margin: 30px 20px 20px 0px;
+}
+
+.booking {
+  color: #8b9394;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 50px 20px 0 20px;
+}
+
+.button {
+  background-color: #f5a3b7;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px 0 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.button:focus {
+  outline: none;
+}
+/* end popup container */
+/* end now showing */
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  display: flex;
+}
+
+.left-footer {
+  width: 40%;
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  text-align: left;
+  font-size: 18px;
+  margin: 30px 20px 0 100px;
+}
+
+.right-footer {
+  width: 40%;
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  text-align: right;
+  font-size: 20px;
+  margin: 30px 50px 0 0;
+}
