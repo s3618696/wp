@@ -96,6 +96,10 @@ nav#mainNav li a {
   vertical-align: middle;
   text-decoration: none;
 }
+
+nav#mainNav li a.active {
+  color: lightskyblue;
+}
 /* end navbar */
 
 /* about */

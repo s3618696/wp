@@ -12,3 +12,22 @@ window.onload = function () {
     }
   };
 };
+
+//Active navigation on scroll
+window.addEventListener("scroll", (event) => {
+  var navigationLinks = document.querySelectorAll("nav ul li a");
+  var fromTop = window.scrollY;
+
+  navigationLinks.forEach((link) => {
+    var section = document.querySelector(link.hash);
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      console.log(section.offsetTop);
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
