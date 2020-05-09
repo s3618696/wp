@@ -361,6 +361,7 @@ nav#mainNav li a.active {
   margin-left: 10px;
   background-color: #111111;
   margin-top: 10px;
+  display: none;
 }
 
 .box:hover {

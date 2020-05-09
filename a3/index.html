@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Assignment 2</title>
+    <title>Assignment 3</title>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link
@@ -21,7 +21,6 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js"></script>
     <script src="../wireframe.js"></script>
   </head>
 
@@ -283,92 +282,20 @@
             <div class="now-showing-title">
               <h1>Now Showing</h1>
             </div>
-            <div class="movie-posters">
-              <div class="box" onclick="openBooking()">
+            <div id="posters" class="movie-posters">
+              <div class="box" data-type="template">
                 <div class="imgBx">
-                  <img src="./images/movies/avenger.jpg" alt="avenger" />
+                  <img src="" />
                 </div>
                 <div class="detail">
                   <div class="middle-content">
-                    <span style="font-size: 20px; color: white;"
-                      >Avengers: Endgame [PG]</span
-                    >
-                    <br /><br />Wed-Fri : 9pm <br />Sat-Sun : 6pm
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div class="imgBx">
-                  <img
-                    src="./images/movies/topandwedding.png"
-                    alt="topwedding"
-                  />
-                </div>
-                <div class="detail">
-                  <div class="middle-content">
-                    <span style="font-size: 20px; color: white;"
-                      >Top End Wedding [MA]</span
-                    >
-                    <br /><br />Mon-Tue : 6pm <br />Sat-Sun : 3pm
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div class="imgBx">
-                  <img src="./images/movies/dumbo.jpg" alt="dumbo" />
-                </div>
-                <div class="detail">
-                  <div class="middle-content">
-                    <span style="font-size: 20px; color: white;"
-                      >Dumbo [R]</span
-                    >
-                    <br /><br />Mon-Tue : 12pm <br />Wed-Fri : 6pm <br />Sat-Sun
-                    : 12pm
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div class="imgBx">
-                  <img
-                    src="./images/movies/thehappyprince.jpg"
-                    alt="happyprince"
-                  />
-                </div>
-                <div class="detail">
-                  <div class="middle-content">
-                    <span style="font-size: 20px; color: white;"
-                      >The Happy Prince [PG]</span
-                    >
-                    <br /><br />Wed-Fri : 12pm <br />Sat-Sun : 9pm
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div class="imgBx">
-                  <img src="./images/movies/paraside.jpg" alt="paraside" />
-                </div>
-                <div class="detail">
-                  <div class="middle-content">
-                    <span style="font-size: 20px; color: white;"
-                      >Paraside [PG]</span
-                    >
-                    <br /><br />Wed-Fri : 6pm <br />Sat-Sun : 12pm
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div class="imgBx">
-                  <img
-                    src="./images/movies/crashlandingonyou.png"
-                    alt="crashonyou"
-                  />
-                </div>
-                <div class="detail">
-                  <div class="middle-content">
-                    <span style="font-size: 20px; color: white;"
-                      >Crash Landing On You [PG]</span
-                    >
-                    <br /><br />Mon-Tue : 10pm <br />Sat-Sun : 9pm
+                    <span
+                      class="title"
+                      style="font-size: 20px; color: white;"
+                    ></span>
+                    <br /><br />
+                    <span class="time" style="font-size: 20px; color: white;">
+                    </span>
                   </div>
                 </div>
               </div>
@@ -377,6 +304,7 @@
               <div class="info">
                 <section class="left-section">
                   <h6
+                    id="movie-name"
                     style="color: #111111; font-size: 20px; font-weight: bold;"
                   >
                     Avengers: Endgame [PG]
@@ -384,7 +312,7 @@
                   <h8 style="color: #8b9394; font-size: 18px;"
                     >Plot Description</h8
                   >
-                  <p>
+                  <p id="movie-plot">
                     The film's development began when Marvel Studios received a
                     loan from Merrill Lynch in April 2005. After the success of
                     the film Iron Man in May 2008, Marvel announced that The
@@ -396,6 +324,7 @@
                 </section>
                 <section class="right-section">
                   <iframe
+                    id="trailer"
                     width="300"
                     height="230"
                     src="https://www.youtube.com/embed/TcMBFSGVi1c"
@@ -434,4 +363,5 @@
       </div>
     </footer>
   </body>
+  <script src="./script.js"></script>
 </html>
