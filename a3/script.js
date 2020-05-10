@@ -218,6 +218,8 @@ function openBooking(e) {
     movie_id = id;
     buttons[i].addEventListener("click", updateBooking);
   }
+
+  getTotal();
 }
 
 //Update Booking Form
