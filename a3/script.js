@@ -56,6 +56,57 @@ var movies = {
     movie_poster: "./images/movies/crashlandingonyou.png",
   },
 };
+
+var seats_standard = { STA: 30, STP: 20, STC: 10 };
+var seats_firstclass = { FCA: 40, FCP: 30, FCC: 20 };
+//Create Seat Selection
+var selector = document.getElementsByClassName("seat-option");
+for (var i = 0; i < selector.length; i++) {
+  for (var j = 1; j < 11; j++) {
+    var option = document.createElement("option");
+    option.setAttribute("value", j);
+    option.innerHTML = j;
+    selector[i].appendChild(option);
+  }
+}
+
+//Showing Bill/Total
+function getTotal() {
+  var listValue = [];
+  var sta = document.getElementById("adult-standard");
+  var staSelectValue = sta.options[sta.selectedIndex].value;
+  var stp = document.getElementById("concession-standard");
+  var stpSelectValue = stp.options[stp.selectedIndex].value;
+  var stc = document.getElementById("children-standard");
+  var stcSelectValue = stc.options[stc.selectedIndex].value;
+  var fca = document.getElementById("adult-fclass");
+  var fcaSelectValue = fca.options[fca.selectedIndex].value;
+  var fcp = document.getElementById("concession-fclass");
+  var fcpSelectValue = fcp.options[fcp.selectedIndex].value;
+  var fcc = document.getElementById("children-fclass");
+  var fccSelectValue = fcc.options[fcc.selectedIndex].value;
+  listValue.push(
+    staSelectValue,
+    stpSelectValue,
+    stcSelectValue,
+    fcaSelectValue,
+    fcpSelectValue,
+    fccSelectValue
+  );
+  for (var i = 0; i < listValue.length; i++) {
+    if (listValue[i] === "") {
+      listValue[i] = 0;
+    }
+  }
+  var total =
+    listValue[0] * 30 +
+    listValue[1] * 20 +
+    listValue[2] * 10 +
+    listValue[3] * 40 +
+    listValue[4] * 30 +
+    listValue[5] * 20;
+  document.getElementById("total-tickets").innerHTML = total;
+}
 //Mapping JSON to html - Showing movies posters
 var keys = Object.keys(movies);
 var docFrag = document.createDocumentFragment();
@@ -80,9 +131,11 @@ for (var i = 0; i < list.length; i++) {
   list[i].addEventListener("click", openBooking);
 }
 
+var movie_id;
 // Open movies' posters
 function openBooking(e) {
   id = e.target.id;
+  document.getElementById("booking-form").style.display = "none";
   var booking = document.getElementById("making-booking");
   var child = booking.lastElementChild;
   while (child) {
@@ -98,11 +151,27 @@ function openBooking(e) {
   for (var i = 0; i < movies[id].movie_time.length; i++) {
     var button = document.createElement("button");
     button.setAttribute("class", "button");
+    button.setAttribute("id", i);
     button.innerHTML = movies[id].movie_time[i];
     booking.appendChild(button);
   }
   document.getElementById("blur-backgroud").style.display = "block";
   document.getElementById("movie-detail").style.display = "block";
+
+  var buttons = document.getElementById("making-booking").children;
+  console.dir(buttons);
+  for (var i = 1; i < buttons.length; i++) {
+    movie_id = id;
+    buttons[i].addEventListener("click", updateBooking);
+  }
+}
+
+//Update Booking Form
+function updateBooking(e) {
+  var id = e.target.id;
+  document.getElementById("movie-booking-name").innerHTML =
+    movies[movie_id].movie_name + " - " + movies[movie_id].movie_time[id];
+  document.getElementById("booking-form").style.display = "block";
 }
 
 //Click outside to dismiss the pop-up

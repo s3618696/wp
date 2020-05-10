@@ -350,23 +350,35 @@
                         <ul>
                           <li>
                             <label for="seats">Adults</label>
-                            <select id="adult-standard">
+                            <select
+                              id="adult-standard"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
                               <option value="">Please Select</option>
-                              <option selected value=""> Unselect</option>
+                              <option value="0"></option>
                             </select>
                           </li>
                           <li>
                             <label for="seats">Concession</label>
-                            <select id="concession-standard">
+                            <select
+                              id="concession-standard"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
                               <option value="">Please Select</option>
-                              <option selected value=""> Unselect</option>
+                              <option value="0"></option>
                             </select>
                           </li>
                           <li>
                             <label for="seats">Children</label>
-                            <select id="children-standard">
+                            <select
+                              id="children-standard"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
                               <option value="">Please Select</option>
-                              <option selected value=""> Unselect</option>
+                              <option value="0"></option>
                             </select>
                           </li>
                         </ul>
@@ -378,23 +390,35 @@
                         <ul>
                           <li>
                             <label for="seats">Adults</label>
-                            <select id="adult-fclass">
+                            <select
+                              id="adult-fclass"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
                               <option value="">Please Select</option>
-                              <option selected value=""> Unselect</option>
+                              <option value="0"></option>
                             </select>
                           </li>
                           <li>
                             <label for="seats">Concession</label>
-                            <select id="concession-fclass">
+                            <select
+                              id="concession-fclass"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
                               <option value="">Please Select</option>
-                              <option selected value=""> Unselect</option>
+                              <option value="0"></option>
                             </select>
                           </li>
                           <li>
                             <label for="seats">Children</label>
-                            <select id="children-fclass">
+                            <select
+                              id="children-fclass"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
                               <option value="">Please Select</option>
-                              <option selected value=""> Unselect</option>
+                              <option value="0"></option>
                             </select>
                           </li>
                         </ul>
@@ -403,7 +427,7 @@
                     <div class="total">
                       <div class="total-container">
                         <label for="bill">Total $</label>
-                        <div class="display-total"></div>
+                        <text id="total-tickets" class="display-total"></text>
                       </div>
                     </div>
                   </div>
@@ -416,11 +440,11 @@
                         </li>
                         <li>
                           <label for="email">Email</label>
-                          <input type="text" id="client-email" value="" />
+                          <input type="email" id="client-email" value="" />
                         </li>
                         <li>
                           <label for="mobile">Mobile</label>
-                          <input type="text" id="client-mobile" value="" />
+                          <input type="tel" id="client-mobile" value="" />
                         </li>
                         <li>
                           <label for="credit-card">Credit Card</label>
@@ -433,7 +457,7 @@
                       </ul>
                     </div>
                     <div class="order-btn-container">
-                      <button class="order-btn">Order</button>
+                      <button class="order-btn" type="submit">Order</button>
                     </div>
                   </div>
                 </div>

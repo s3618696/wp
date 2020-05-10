@@ -475,22 +475,25 @@ nav#mainNav li a.active {
 }
 
 .button:focus {
+  background-color: #111111;
+  color: #ffffff;
   outline: none;
 }
 
 #booking-form {
   margin-top: 50px;
+  display: none;
 }
 
 .booking-row {
-  width: 617px;
+  width: 100%;
   height: 350px;
   display: table;
 }
 
 .booking-column {
   float: left;
-  width: 308.5px;
+  width: 50%;
   height: 100%;
   font-weight: 900;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -568,6 +571,7 @@ option {
   height: 25px;
   border-radius: 5px;
   border: dashed 1px #000000;
+  text-align: center;
 }
 
 .credit-form {
@@ -578,7 +582,9 @@ option {
   align-items: center;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   border-radius: 5px;
   border: solid 1px #000000;
 }
