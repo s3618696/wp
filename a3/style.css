@@ -528,7 +528,16 @@ ul {
 }
 
 ul li {
-  padding: 0px 0px 10px 0px;
+  padding: 10px 0px 0px 0px;
+}
+
+.validation {
+  color: #c04589;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  display: none;
+  text-align: center;
 }
 
 .seat-cate {

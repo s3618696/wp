@@ -57,8 +57,54 @@ var movies = {
   },
 };
 
-var seats_standard = { STA: 30, STP: 20, STC: 10 };
-var seats_firstclass = { FCA: 40, FCP: 30, FCC: 20 };
+//Validate Input
+function validateName() {
+  var name = document.getElementById("client-name").value;
+  var nameRGEX = /^[a-zA-Z]+(([',.-\S][a-zA-Z ])?[a-zA-Z]*)*$/;
+  var nameResult = nameRGEX.test(name);
+  if (nameResult == false) {
+    document.getElementById("invalid-name").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("invalid-name").style.display = "none";
+    return true;
+  }
+}
+
+function validateMobile() {
+  var mobile = document.getElementById("client-mobile").value;
+  var mobileRGEX = /0?(61)0?(\d{1,2})(\d{4})(\d{4})/; //Au phone
+  var mobileResult = mobileRGEX.test(mobile.replace(/[^\d]/g, ""));
+  if (mobileResult == false) {
+    document.getElementById("invalid-mobile").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("invalid-mobile").style.display = "none";
+    return true;
+  }
+}
+
+function validateCredit() {
+  var credit = document.getElementById("client-credit").value;
+  var creditRGEX = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/; //Au phone
+  var creditResult = creditRGEX.test(credit.replace(/[^\d]/g, ""));
+  if (creditResult == false) {
+    document.getElementById("invalid-credit").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("invalid-credit").style.display = "none";
+    return true;
+  }
+}
+
+//get current mm/yyyy
+var today = new Date();
+var mm = String(today.getMonth() + 1).padStart(2, "0");
+var yyyy = today.getFullYear();
+console.log(mm + "-" + yyyy);
+var input_date = document.getElementById("expiry-date");
+input_date.setAttribute("min", yyyy + "-" + mm);
+
 var selectedMovieTime;
 //Create Seat Selection
 var selector = document.getElementsByClassName("seat-option");
@@ -73,6 +119,7 @@ for (var i = 0; i < selector.length; i++) {
 
 //Showing Bill/Total
 function getTotal() {
+  var total = 0;
   var listValue = [];
   var sta = document.getElementById("adult-standard");
   var staSelectValue = sta.options[sta.selectedIndex].value;
@@ -99,7 +146,6 @@ function getTotal() {
       listValue[i] = 0;
     }
   }
-  var total;
   total =
     listValue[0] * 30 +
     listValue[1] * 20 +
@@ -108,13 +154,12 @@ function getTotal() {
     listValue[4] * 30 +
     listValue[5] * 20;
   var res = selectedMovieTime.split(" : ");
-  if (res[1] === "12pm") {
-    //set discount
-    if (res[0] !== "Sat-Sun") {
-      total = total / 2;
-    }
+  if (res[1] === "12pm" && res[0] !== "Sat-Sun") {
+    total = total / 2;
+  } else {
+    total;
   }
-  document.getElementById("total-tickets").innerHTML = total;
+  document.getElementById("total-tickets").innerHTML = "$ " + total.toFixed(2);
 }
 //Mapping JSON to html - Showing movies posters
 var keys = Object.keys(movies);
@@ -183,12 +228,12 @@ function updateBooking(e) {
   document.getElementById("booking-form").style.display = "block";
   selectedMovieTime = movies[movie_id].movie_time[id];
   var res = selectedMovieTime.split(" : ");
-  if (res[1] === "12pm") {
-    //set discount
-    if (res[0] !== "Sat-Sun") {
-      document.getElementById("discount").style.display = "block";
-    }
+  if (res[1] === "12pm" && res[0] !== "Sat-Sun") {
+    document.getElementById("discount").style.display = "block";
+  } else {
+    document.getElementById("discount").style.display = "none";
   }
+  getTotal();
 }
 
 //Click outside to dismiss the pop-up

@@ -447,23 +447,44 @@
                       <ul>
                         <li>
                           <label for="name">Name</label>
-                          <input type="text" id="client-name" value="" />
+                          <input
+                            type="text"
+                            id="client-name"
+                            oninput="validateName()"
+                          />
                         </li>
+                        <text id="invalid-name" class="validation"
+                          >Invalid Input</text
+                        >
                         <li>
                           <label for="email">Email</label>
-                          <input type="email" id="client-email" value="" />
+                          <input type="email" id="client-email" />
                         </li>
                         <li>
                           <label for="mobile">Mobile</label>
-                          <input type="tel" id="client-mobile" value="" />
+                          <input
+                            type="tel"
+                            id="client-mobile"
+                            oninput="validateMobile()"
+                          />
+                          <text id="invalid-mobile" class="validation"
+                            >Invalid Input</text
+                          >
                         </li>
                         <li>
                           <label for="credit-card">Credit Card</label>
-                          <input type="text" id="client-credit-card" value="" />
+                          <input
+                            type="text"
+                            id="client-credit"
+                            oninput="validateCredit()"
+                          />
+                          <text id="invalid-credit" class="validation"
+                            >Invalid Input</text
+                          >
                         </li>
                         <li>
                           <label for="expiry">Expiry</label>
-                          <input type="month" id="expiry-date" value="" />
+                          <input type="month" id="expiry-date" />
                         </li>
                       </ul>
                     </div>
