@@ -59,6 +59,7 @@ var movies = {
 
 var seats_standard = { STA: 30, STP: 20, STC: 10 };
 var seats_firstclass = { FCA: 40, FCP: 30, FCC: 20 };
+var selectedMovieTime;
 //Create Seat Selection
 var selector = document.getElementsByClassName("seat-option");
 for (var i = 0; i < selector.length; i++) {
@@ -98,13 +99,21 @@ function getTotal() {
       listValue[i] = 0;
     }
   }
-  var total =
+  var total;
+  total =
     listValue[0] * 30 +
     listValue[1] * 20 +
     listValue[2] * 10 +
     listValue[3] * 40 +
     listValue[4] * 30 +
     listValue[5] * 20;
+  var res = selectedMovieTime.split(" : ");
+  if (res[1] === "12pm") {
+    //set discount
+    if (res[0] !== "Sat-Sun") {
+      total = total / 2;
+    }
+  }
   document.getElementById("total-tickets").innerHTML = total;
 }
 //Mapping JSON to html - Showing movies posters
@@ -172,6 +181,14 @@ function updateBooking(e) {
   document.getElementById("movie-booking-name").innerHTML =
     movies[movie_id].movie_name + " - " + movies[movie_id].movie_time[id];
   document.getElementById("booking-form").style.display = "block";
+  selectedMovieTime = movies[movie_id].movie_time[id];
+  var res = selectedMovieTime.split(" : ");
+  if (res[1] === "12pm") {
+    //set discount
+    if (res[0] !== "Sat-Sun") {
+      document.getElementById("discount").style.display = "block";
+    }
+  }
 }
 
 //Click outside to dismiss the pop-up
