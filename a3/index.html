@@ -325,10 +325,118 @@
                   ></iframe>
                 </section>
               </div>
-              <div class="booking">
-                <h8>Make a booking</h8>
-                <button id="btn1" class="button"></button>
-                <button id="btn2" class="button"></button>
+              <div id="making-booking" class="booking"></div>
+              <div
+                id="booking-form"
+                class="movie-booking-form"
+                style="height: 500px; width: 100%;"
+              >
+                <h6
+                  id="movie-booking-name"
+                  style="
+                    color: #111111;
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-left: 30px;
+                  "
+                >
+                  Dumbo [R] - Wed-Fri : 6pm
+                </h6>
+                <div class="booking-row">
+                  <div class="booking-column">
+                    <div class="seat-card">
+                      <h8 class="seat-cate">Standard</h8>
+                      <div id="standard-booking" class="select-booking">
+                        <ul>
+                          <li>
+                            <label for="seats">Adults</label>
+                            <select id="adult-standard">
+                              <option value="">Please Select</option>
+                              <option selected value=""> Unselect</option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Concession</label>
+                            <select id="concession-standard">
+                              <option value="">Please Select</option>
+                              <option selected value=""> Unselect</option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Children</label>
+                            <select id="children-standard">
+                              <option value="">Please Select</option>
+                              <option selected value=""> Unselect</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="seat-card">
+                      <h8 class="seat-cate">First Class</h8>
+                      <div id="firstclass-booking" class="select-booking">
+                        <ul>
+                          <li>
+                            <label for="seats">Adults</label>
+                            <select id="adult-fclass">
+                              <option value="">Please Select</option>
+                              <option selected value=""> Unselect</option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Concession</label>
+                            <select id="concession-fclass">
+                              <option value="">Please Select</option>
+                              <option selected value=""> Unselect</option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Children</label>
+                            <select id="children-fclass">
+                              <option value="">Please Select</option>
+                              <option selected value=""> Unselect</option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="total">
+                      <div class="total-container">
+                        <label for="bill">Total $</label>
+                        <div class="display-total"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-column">
+                    <div class="credit-form">
+                      <ul>
+                        <li>
+                          <label for="name">Name</label>
+                          <input type="text" id="client-name" value="" />
+                        </li>
+                        <li>
+                          <label for="email">Email</label>
+                          <input type="text" id="client-email" value="" />
+                        </li>
+                        <li>
+                          <label for="mobile">Mobile</label>
+                          <input type="text" id="client-mobile" value="" />
+                        </li>
+                        <li>
+                          <label for="credit-card">Credit Card</label>
+                          <input type="text" id="client-credit-card" value="" />
+                        </li>
+                        <li>
+                          <label for="expiry">Expiry</label>
+                          <input type="month" id="expiry-date" value="" />
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="order-btn-container">
+                      <button class="order-btn">Order</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

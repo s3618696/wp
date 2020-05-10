@@ -25,7 +25,7 @@ var movies = {
     plot_description:
       "In 1919, equestrian performer and World War I amputee Holt Farrier returns after the war to the Medici Brothers' Circus, run by Max Medici.",
     trailer_link: "https://www.youtube.com/embed/7NiYVoqBt-8",
-    movie_time: ["Wed-Fri : 6pm", "Sat-Sun : 12pm"],
+    movie_time: ["Wed-Fri : 6pm", "Sat-Sun : 12pm", "Tue-Wed : 12pm"],
     movie_poster: "./images/movies/dumbo.jpg",
   },
   3: {
@@ -83,11 +83,24 @@ for (var i = 0; i < list.length; i++) {
 // Open movies' posters
 function openBooking(e) {
   id = e.target.id;
+  var booking = document.getElementById("making-booking");
+  var child = booking.lastElementChild;
+  while (child) {
+    booking.removeChild(child);
+    child = booking.lastElementChild;
+  }
   document.getElementById("movie-name").innerHTML = movies[id].movie_name;
   document.getElementById("movie-plot").innerHTML = movies[id].plot_description;
   document.getElementById("trailer").src = movies[id].trailer_link;
-  document.getElementById("btn1").innerHTML = movies[id].movie_time[0];
-  document.getElementById("btn2").innerHTML = movies[id].movie_time[1];
+  h8 = document.createElement("h8");
+  h8.innerHTML = "Make a booking";
+  booking.appendChild(h8);
+  for (var i = 0; i < movies[id].movie_time.length; i++) {
+    var button = document.createElement("button");
+    button.setAttribute("class", "button");
+    button.innerHTML = movies[id].movie_time[i];
+    booking.appendChild(button);
+  }
   document.getElementById("blur-backgroud").style.display = "block";
   document.getElementById("movie-detail").style.display = "block";
 }
