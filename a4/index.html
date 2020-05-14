@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment 3</title>
+
+    <!-- Keep wireframe.css for debugging, add your css to style.css -->
+    <link
+      id="wireframecss"
+      type="text/css"
+      rel="stylesheet"
+      href="../wireframe.css"
+      disabled
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link id="stylecss" type="text/css" rel="stylesheet" href="style.css" />
+    <link href="font.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="../wireframe.js"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <div class="header-backgroud"></div>
+        <div class="center-content">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+      </header>
+      <div class="sticky nav-container">
+        <div class="nav-backgroud"></div>
+        <nav id="mainNav">
+          <ul>
+            <li>
+              <a href="#about">About us</a>
+            </li>
+            <li>
+              <a href="#prices">Prices</a>
+            </li>
+            <li>
+              <a href="#now-showing">Now showing</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <main>
+        <section id="about" class="about-cinemax">
+          <div class="first-content">
+            <div class="parallax-1"></div>
+            <div class="content-center">
+              <h1>About Us</h1>
+              <p class="intro">
+                <span class="black">CINEMAX</span> would like to warmly welcome
+                you, sincerely thank you for visiting the website. In recent
+                times, Cinemax has temporarily closed to upgrade some items to
+                bring a better movie viewing experience to the audience. As of
+                April 18, 2020, Cinemax officially reopened with the upgraded
+                facilities as follows: 1. All cinemas have been equipped with
+                high-class seats for adults and children. 2. All cinemas are
+                equipped with a 3D projection system, along with the
+                international standard Dolby stereo and sound system. Wishing
+                you relaxing moments with friends and family in Cinemax's class
+                and superior service!
+              </p>
+            </div>
+          </div>
+          <div class="facilities">
+            <div class="title">
+              <h1>Our Facilities</h1>
+            </div>
+            <div class="row">
+              <div class="column">
+                <h3>Standard Adult</h3>
+                <img src="./images/facility/Tuscany.png" alt="STA" />
+              </div>
+              <div class="column">
+                <h3>Standard Concession</h3>
+                <img src="./images/facility/Opus.png" alt="STP" />
+              </div>
+              <div class="column">
+                <h3>Standard Child</h3>
+                <img src="./images/facility/Dory.png" alt="STC" />
+              </div>
+              <div class="column">
+                <h3>First Class Adult</h3>
+                <img src="./images/facility/premiummilano.png" alt="FCA" />
+              </div>
+              <div class="column">
+                <h3>First Class Concession</h3>
+                <img
+                  src="./images/facility/premiummilanozerowall.png"
+                  alt="FCP"
+                />
+              </div>
+              <div class="column">
+                <h3>First Class Child</h3>
+                <img src="./images/facility/Ariel.png" alt="FCC" />
+              </div>
+            </div>
+          </div>
+          <div class="projection">
+            <div class="title">
+              <h1>Dobly Atmos and 3D for Cinema Benefits</h1>
+            </div>
+            <div class="row">
+              <div class="left-column">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/Atmos_1.jpeg" alt="A1" />
+                  </div>
+                  <div class="card-content">
+                    <h3>Fills the Cinema with Breathtaking Sound</h3>
+                    <p>
+                      Sound comes from all directions, including overhead, to
+                      fill the cinema with astonishing clarity, richness,
+                      detail, and depth.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/3D_3.jpeg" alt="A2" />
+                  </div>
+                  <div class="card-content">
+                    <h3>
+                      Creates a Powerfully Moving Entertainment Experience
+                    </h3>
+                    <p>
+                      It's sound that excites your senses and inspires your
+                      emotions to deliver the full impact of entertainment.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/Atmos_3.jpeg" alt="A3" />
+                  </div>
+                  <div class="card-content">
+                    <h3>Puts Sounds into Motion All Around You</h3>
+                    <p>
+                      The sounds of the onscreen story move all around you in
+                      three-dimensional space, so you feel like you're inside
+                      the action.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="middle-column">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/Atmos_2.jpeg" alt="A4" />
+                  </div>
+                  <div class="card-content">
+                    <h3>Conveys the Artist's Intent</h3>
+                    <p>
+                      Dolby Atmos® gives artists amazing new capabilities to
+                      tell their stories, accent their games, or perform their
+                      music—so you can experience the power of the artist's
+                      vision.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/Atmos_4.jpeg" alt="3D1" />
+                  </div>
+                  <div class="card-content">
+                    <h3>
+                      Superior Picture Quality
+                    </h3>
+                    <p>
+                      Advanced filter technology guarantees crisp, vivid images
+                      while minimizing artifacts and halos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="right-column">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/3D_2.jpeg" alt="3D2" />
+                  </div>
+                  <div class="card-content">
+                    <h3>Kid-Friendly, Too</h3>
+                    <p>
+                      The Dolby 3D glasses also come sized for children, making
+                      3D moviegoing more comfortable and fun for them.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/3D_4.jpeg" alt="3D3" />
+                  </div>
+                  <div class="card-content">
+                    <h3>
+                      A Better Glasses Solution
+                    </h3>
+                    <p>
+                      High-quality Dolby 3D glasses stay comfortable through the
+                      longest features. They fit easily over most prescription
+                      glasses. And because they're reusable, they're much more
+                      eco-friendly than disposables.
+                    </p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-img">
+                    <img src="./images/Atmos_3D/3D_1.jpeg" alt="3D4" />
+                  </div>
+                  <div class="card-content">
+                    <h3>Works on Any Screen</h3>
+                    <p>
+                      Dolby 3D works on either white or silver screens, so
+                      you'll see the best picture in any theatre, from any seat.
+                      Other 3D technologies require a silver screen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="prices" class="price">
+          <div class="parallax-2"></div>
+          <div class="price-container">
+            <div class="price-title">
+              <h1>Prices</h1>
+            </div>
+            <div class="price-row">
+              <h8 class="row-title">Seat Type</h8>
+              <h8 class="row-title">Seat Code</h8>
+              <h8 class="row-title">Mon and Wed. Weekdays(12pm)</h8>
+              <h8 class="row-title">All other times</h8>
+            </div>
+            <div class="price-row">
+              <h8 class="row-title">Standard Adult</h8>
+              <h8 class="row-title">STA</h8>
+              <h8 class="row-title">14.00</h8>
+              <h8 class="row-title">19.80</h8>
+            </div>
+            <div class="price-row">
+              <h8 class="row-title">Standard Concession</h8>
+              <h8 class="row-title">STP</h8>
+              <h8 class="row-title">12.50</h8>
+              <h8 class="row-title">17.50</h8>
+            </div>
+            <div class="price-row">
+              <h8 class="row-title">Standard Child</h8>
+              <h8 class="row-title">STC</h8>
+              <h8 class="row-title">11.00</h8>
+              <h8 class="row-title">15.30</h8>
+            </div>
+            <div class="price-row">
+              <h8 class="row-title">First Class Adult</h8>
+              <h8 class="row-title">FCA</h8>
+              <h8 class="row-title">24.00</h8>
+              <h8 class="row-title">30.00</h8>
+            </div>
+            <div class="price-row">
+              <h8 class="row-title">First Class Concession</h8>
+              <h8 class="row-title">FCP</h8>
+              <h8 class="row-title">22.50</h8>
+              <h8 class="row-title">27.00</h8>
+            </div>
+            <div class="price-row">
+              <h8 class="row-title">First Class Child</h8>
+              <h8 class="row-title">FCC</h8>
+              <h8 class="row-title">21.00</h8>
+              <h8 class="row-title">24.00</h8>
+            </div>
+          </div>
+        </section>
+        <section id="now-showing" class="now-showing-movie">
+          <div id="blur-backgroud" class="backgroud-blur"></div>
+          <div class="now-showing-content">
+            <div class="now-showing-title">
+              <h1>Now Showing</h1>
+            </div>
+            <div id="posters" class="movie-posters">
+              <div class="box" data-type="template">
+                <div id="0" class="box-container"></div>
+                <div class="imgBx">
+                  <img src="" />
+                </div>
+                <div class="detail">
+                  <div class="middle-content">
+                    <span
+                      class="title"
+                      style="font-size: 20px; color: white;"
+                    ></span>
+                    <br /><br />
+                    <span class="time" style="font-size: 20px; color: white;">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="movie-detail" class="movie-info">
+              <div class="info">
+                <section class="left-section">
+                  <h6
+                    id="movie-name"
+                    style="color: #111111; font-size: 20px; font-weight: bold;"
+                  ></h6>
+                  <h8 style="color: #8b9394; font-size: 18px;"
+                    >Plot Description</h8
+                  >
+                  <p id="movie-plot"></p>
+                </section>
+                <section class="right-section">
+                  <iframe
+                    id="trailer"
+                    width="300"
+                    height="230"
+                    src=""
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </section>
+              </div>
+              <div id="making-booking" class="booking"></div>
+              <div
+                id="booking-form"
+                class="movie-booking-form"
+                style="height: 500px; width: 100%;"
+              >
+                <h6
+                  id="movie-booking-name"
+                  style="
+                    color: #111111;
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding-left: 30px;
+                  "
+                >
+                  Dumbo [R] - Wed-Fri : 6pm
+                </h6>
+                <text
+                  id="discount"
+                  style="
+                    color: #c04589;
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding-left: 30px;
+                    display: none;
+                  "
+                  >Congratulation! You will get 50% off on the total.</text
+                >
+                <div class="booking-row">
+                  <div class="booking-column">
+                    <div class="seat-card">
+                      <h8 class="seat-cate">Standard</h8>
+                      <div id="standard-booking" class="select-booking">
+                        <ul>
+                          <li>
+                            <label for="seats">Adults</label>
+                            <select
+                              id="adult-standard"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
+                              <option value="">Please Select</option>
+                              <option value="0"></option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Concession</label>
+                            <select
+                              id="concession-standard"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
+                              <option value="">Please Select</option>
+                              <option value="0"></option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Children</label>
+                            <select
+                              id="children-standard"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
+                              <option value="">Please Select</option>
+                              <option value="0"></option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="seat-card">
+                      <h8 class="seat-cate">First Class</h8>
+                      <div id="firstclass-booking" class="select-booking">
+                        <ul>
+                          <li>
+                            <label for="seats">Adults</label>
+                            <select
+                              id="adult-fclass"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
+                              <option value="">Please Select</option>
+                              <option value="0"></option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Concession</label>
+                            <select
+                              id="concession-fclass"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
+                              <option value="">Please Select</option>
+                              <option value="0"></option>
+                            </select>
+                          </li>
+                          <li>
+                            <label for="seats">Children</label>
+                            <select
+                              id="children-fclass"
+                              class="seat-option"
+                              onchange="getTotal()"
+                            >
+                              <option value="">Please Select</option>
+                              <option value="0"></option>
+                            </select>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="total">
+                      <div class="total-container">
+                        <label for="bill">Total $</label>
+                        <text id="total-tickets" class="display-total"></text>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-column">
+                    <?php
+                    pre_r($_POST);
+                    if(isset($_POST['submit'])){
+                      echo "It's Work";
+                    }
+                    ?>
+                    <form
+                      action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php"
+                      method="POST"
+                      class="credit-form"
+                    >
+                      <ul id="form-ul">
+                        <li>
+                          <label for="name">Name</label>
+                          <input
+                            type="text"
+                            id="client-name"
+                            oninput="validateName()"
+                          />
+                        </li>
+                        <text id="invalid-name" class="validation"
+                          >Invalid Input</text
+                        >
+                        <li>
+                          <label for="email">Email</label>
+                          <input type="email" id="client-email" />
+                        </li>
+                        <li>
+                          <label for="mobile">Mobile</label>
+                          <input
+                            type="tel"
+                            id="client-mobile"
+                            oninput="validateMobile()"
+                          />
+                          <text id="invalid-mobile" class="validation"
+                            >Invalid Input</text
+                          >
+                        </li>
+                        <li>
+                          <label for="credit-card">Credit Card</label>
+                          <input
+                            type="text"
+                            id="client-credit"
+                            oninput="validateCredit()"
+                          />
+                          <text id="invalid-credit" class="validation"
+                            >Invalid Input</text
+                          >
+                        </li>
+                        <li>
+                          <label for="expiry">Expiry</label>
+                          <input type="month" id="expiry-date" />
+                        </li>
+                      </ul>
+                      <input
+                        class="order-btn"
+                        type="submit"
+                        name="order"
+                        value="Order"
+                      />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="left-footer">
+          <h6>
+            cinemax@gmail.com<br />+8401234567<br />Cinemax Building, 03 Wall
+            Street, Ward 2, HCM City
+          </h6>
+        </div>
+        <div class="right-footer">
+          <h6>
+            Khuc Thi Xuan Quyen - s3618696 <br /><a
+              >https://github.com/s3618696/wp/</a
+            >
+          </h6>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./script.js"></script>
+</html>
+
+<?php
+function pre_r($array){
+    echo '<pre>';
+    print_r($array);
+    echo '</pre>';
+}
+?>
