@@ -18,13 +18,13 @@
             <div class="yellow-border"></div>
             <text>INVOICE</text>
         </div>
-        <div class="row">
-            <div class="column col1">
+        <div class="invoice-row">
+            <div class="invoice-column col1">
                 <h4>Invoice to:</h4>
                 <text style="font-weight: 900;">BumBeoHAHA<br></text>
                 <span style="color: grey">bum@gmail.com<br>0936225495</span>
             </div>
-            <div class="column col2">
+            <div class="invoice-column col2">
                 <h6>Invoice # <span style="margin-left: 55px; color: grey">52148</span></h6>
                 <h6>Date <span style="margin-left: 50px; color: grey">22/05/2020</span></h6>
             </div>
@@ -61,13 +61,13 @@
                 </tr>
             </table>
         </div>
-        <div class="row">
-            <div class="column col1">
+        <div class="invoice-row">
+            <div class="invoice-column col1">
                 <h6>Thank you for choosing us.</h6>
                 <text style="font-weight: 900;">Co.Ltd.Cinemax<br></text>
                 <span style="color: grey">ABN: 00 123 456 789</span>
             </div>
-            <div class="column col2">
+            <div class="invoice-column col2">
                 <ul class="ul1">
                     <li>Sub Total</li>
                     <li>GST</li>

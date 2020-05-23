@@ -100,9 +100,10 @@ function validateCredit() {
 //get current mm/yyyy
 var today = new Date();
 var mm = String(today.getMonth() + 1).padStart(2, "0");
+var nextMonth = String(today.getMonth() + 2).padStart(2, "0");
 var yyyy = today.getFullYear();
 var input_date = document.getElementById("expiry-date");
-input_date.setAttribute("min", yyyy + "-" + mm);
+input_date.setAttribute("min", yyyy + "-" + nextMonth);
 
 var selectedMovieTime;
 //Create Seat Selection
@@ -114,6 +115,22 @@ for (var i = 0; i < selector.length; i++) {
     option.innerHTML = j;
     selector[i].appendChild(option);
   }
+}
+
+//Update Booking Form
+function updateBooking(e) {
+  var id = e.target.id;
+  document.getElementById("movie-booking-name").innerHTML =
+    movies[movie_id].movie_name + " - " + movies[movie_id].movie_time[id];
+  document.getElementById("booking-form").style.display = "block";
+  selectedMovieTime = movies[movie_id].movie_time[id];
+  var res = selectedMovieTime.split(" : ");
+  if (res[1] === "12pm" && res[0] !== "Sat-Sun") {
+    document.getElementById("discount").style.display = "block";
+  } else {
+    document.getElementById("discount").style.display = "none";
+  }
+  getTotal();
 }
 
 //Showing Bill/Total
@@ -216,22 +233,6 @@ function openBooking(e) {
     buttons[i].addEventListener("click", updateBooking);
   }
 
-  getTotal();
-}
-
-//Update Booking Form
-function updateBooking(e) {
-  var id = e.target.id;
-  document.getElementById("movie-booking-name").innerHTML =
-    movies[movie_id].movie_name + " - " + movies[movie_id].movie_time[id];
-  document.getElementById("booking-form").style.display = "block";
-  selectedMovieTime = movies[movie_id].movie_time[id];
-  var res = selectedMovieTime.split(" : ");
-  if (res[1] === "12pm" && res[0] !== "Sat-Sun") {
-    document.getElementById("discount").style.display = "block";
-  } else {
-    document.getElementById("discount").style.display = "none";
-  }
   getTotal();
 }
 

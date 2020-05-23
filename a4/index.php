@@ -26,9 +26,9 @@
 <body>
     <?php include 'index.html';?>
     <?php include 'tools.php';?>
-    <script type="text/javascript">
-        <?php include 'script.js'; ?>
-    </script>
+    <script>
+<?php include 'script.js';?></script>
+<?php include './receipt/receipt.php';?>
+<?php include './ticket/ticket.php';?>
 </body>
 </html>
-<?php include './receipt/receipt.php'; ?>

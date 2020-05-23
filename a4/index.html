@@ -416,6 +416,7 @@
                       <input
                         type="text"
                         id="client-name"
+                        value=""
                         oninput="validateName()"
                       />
                     </li>
@@ -424,13 +425,14 @@
                     >
                     <li>
                       <label for="email">Email</label>
-                      <input type="email" id="client-email" />
+                      <input type="email" id="client-email" value="" />
                     </li>
                     <li>
                       <label for="mobile">Mobile</label>
                       <input
                         type="tel"
                         id="client-mobile"
+                        value=""
                         oninput="validateMobile()"
                       />
                       <text id="invalid-mobile" class="validation"
@@ -442,6 +444,7 @@
                       <input
                         type="text"
                         id="client-credit"
+                        value=""
                         oninput="validateCredit()"
                       />
                       <text id="invalid-credit" class="validation"
@@ -450,10 +453,11 @@
                     </li>
                     <li>
                       <label for="expiry">Expiry</label>
-                      <input type="month" id="expiry-date" />
+                      <input type="month" id="expiry-date" value="" />
                     </li>
                   </ul>
                   <input
+                    id="submit-form-btn"
                     class="order-btn"
                     type="submit"
                     name="order"
@@ -485,4 +489,3 @@
     </div>
   </div>
 </footer>
-<div id="data-test" style="height: 800px; width: 100%;"></div>
